@@ -4,8 +4,9 @@ import java.util.Scanner;
 public class ContaTerminal {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try(Scanner scanner = new Scanner(System.in)){;
 
+        
         System.out.println("Por favor digite o numero da Agencia");
         String agencia = scanner.nextLine();
 
@@ -21,8 +22,10 @@ public class ContaTerminal {
         String mensagem = "Ola" + nomeCliente + ", Obrigado por criar uma conta com o nosso banco sua Agencia e " + agencia + " sua Conta e " + numeroConta + " eu saldo e " + saldo + " Disponivel para saque";
 
         System.err.println(mensagem);
+
+        
         scanner.close();
 
+        }
     }
-
 }
